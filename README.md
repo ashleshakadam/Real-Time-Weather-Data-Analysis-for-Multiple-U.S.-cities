@@ -1,44 +1,47 @@
-Real-Time Weather Data Analysis for Multiple U.S. Cities
+# Real-Time Weather Data Analysis for Multiple U.S. Cities
 
-This project demonstrates a real-time weather data ingestion and analysis pipeline for multiple major U.S. cities. The solution leverages the OpenWeatherMap API to fetch live weather metrics, stores the data in an Apache Spark DataFrame for scalable processing, and uses Spark SQL to extract actionable insights.
+This project demonstrates a real-time weather data ingestion and analysis pipeline for multiple major U.S. cities. It leverages the [OpenWeatherMap API](https://openweathermap.org/api) to fetch live weather metrics, stores the data in an Apache Spark DataFrame for scalable processing, and uses Spark SQL to extract actionable insights.
 
-Table of Contents
-	•	Overview
-	•	Features
-	•	AWS Setup
-	•	Data Ingestion and Processing
-	•	SQL-Based Analysis
-	•	Results
-	•	Short Report
-	•	Conclusion
+## Table of Contents
 
-Overview
+- [Overview](#overview)
+- [Features](#features)
+- [AWS Setup](#aws-setup)
+- [Data Ingestion and Processing](#data-ingestion-and-processing)
+- [SQL-Based Analysis](#sql-based-analysis)
+- [Results](#results)
+- [Short Report](#short-report)
+- [Conclusion](#conclusion)
+
+## Overview
 
 This project implements a scalable, real-time weather monitoring system that:
-	•	Continuously fetches weather data for multiple U.S. cities.
-	•	Processes and stores the JSON responses using Apache Spark.
-	•	Executes SQL queries to analyze temperature extremes, average temperature, city-specific weather, humidity trends, and the frequency of weather conditions.
+- Continuously fetches weather data for multiple U.S. cities.
+- Processes and stores the JSON responses using Apache Spark.
+- Executes SQL queries to analyze temperature extremes, average temperature, city-specific weather, humidity trends, and the frequency of weather conditions.
 
-Features
-	•	Real-Time Data Ingestion: Retrieves weather metrics every 30 seconds.
-	•	Scalable Processing: Utilizes Apache Spark DataFrames for distributed data storage and processing.
-	•	SQL-Based Analysis: Performs complex queries to extract meaningful insights from the weather data.
-	•	Insightful Reporting: Summarizes key metrics such as temperature extremes, average temperatures, and humidity levels.
+## Features
 
-AWS Setup
+- **Real-Time Data Ingestion:** Retrieves weather metrics every 30 seconds.
+- **Scalable Processing:** Utilizes Apache Spark DataFrames for distributed data storage and processing.
+- **SQL-Based Analysis:** Performs complex queries to extract meaningful insights from the weather data.
+- **Insightful Reporting:** Summarizes key metrics such as temperature extremes, average temperatures, and humidity levels.
+
+## AWS Setup
 
 The solution is deployed on AWS and involves:
-	1.	Configuring an environment to support real-time data ingestion.
-	2.	Integrating the OpenWeatherMap API for continuous weather data retrieval.
-	3.	Utilizing Apache Spark for distributed processing of the acquired data.
+1. Configuring an environment to support real-time data ingestion.
+2. Integrating the OpenWeatherMap API for continuous weather data retrieval.
+3. Utilizing Apache Spark for distributed processing of the acquired data.
 
-Data Ingestion and Processing
-	•	Script: The main Python script weather_analysis.py is responsible for fetching, parsing, and storing the weather data.
-	•	Data Storage: The structured JSON responses from the API are ingested into an Apache Spark DataFrame.
-	•	Commands:
+## Data Ingestion and Processing
 
-nano weather_analysis.py
-cat weather_analysis.py
+- **Script:** The main Python script `weather_analysis.py` is responsible for fetching, parsing, and storing the weather data.
+- **Data Storage:** The structured JSON responses from the API are ingested into an Apache Spark DataFrame.
+- **Commands:**
+  ```bash
+  nano weather_analysis.py
+  cat weather_analysis.py
 
 (The above commands show how the file was created and its content displayed.)
 
@@ -118,7 +121,7 @@ Results
 
 The SQL-based queries provide detailed insights into the weather data:
 	•	Temperature Extremes: A maximum of 24.61°C and a minimum of 2.51°C highlight the broad range of conditions.
-	•	Average Temperature: The average temperature of approximately 9.56°C offers a baseline of the overall weather across the selected cities.
+	•	Average Temperature: The overall average temperature of approximately 9.56°C offers a baseline of the overall weather across the selected cities.
 	•	City Trends: Miami emerges as the warmest city while Denver registers the coldest conditions.
 	•	Humidity: Cities such as Dallas, Seattle, Miami, and New York experience periods of high humidity (above 80%).
 	•	Weather Distribution: The data shows a predominance of “Clear” conditions, with fewer occurrences of “Mist” and “Rain.”
