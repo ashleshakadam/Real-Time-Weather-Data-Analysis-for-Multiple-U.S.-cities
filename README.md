@@ -34,6 +34,9 @@ The solution is deployed on AWS and involves:
 2. Integrating the OpenWeatherMap API for continuous weather data retrieval.
 3. Utilizing Apache Spark for distributed processing of the acquired data.
 
+<img width="476" alt="image" src="https://github.com/user-attachments/assets/a69c349e-8c8f-49c0-949d-459b28a97e86" />
+
+
 ## Data Ingestion and Processing
 
 - **Script:** The main Python script `weather_analysis.py` is responsible for fetching, parsing, and storing the weather data.
@@ -44,6 +47,15 @@ The solution is deployed on AWS and involves:
   cat weather_analysis.py
 
 (The above commands show how the file was created and its content displayed.)
+
+<img width="468" alt="image" src="https://github.com/user-attachments/assets/fff9e3d9-6187-421f-946f-cfea7a68452e" />
+<img width="468" alt="image" src="https://github.com/user-attachments/assets/ea5956d0-ff4f-41d0-a994-5f85a275c803" />
+<img width="468" alt="image" src="https://github.com/user-attachments/assets/f2e8301b-6338-45cd-9cac-50232d61a110" />
+<img width="468" alt="image" src="https://github.com/user-attachments/assets/23266d19-912b-4679-b32d-02f3943e783f" />
+
+SQL Analysis:
+
+<img width="468" alt="image" src="https://github.com/user-attachments/assets/66d718eb-4c54-47d9-8bd8-da186dc495cc" />
 
 Results
 
