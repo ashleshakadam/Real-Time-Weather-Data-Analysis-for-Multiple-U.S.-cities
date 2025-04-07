@@ -20,11 +20,6 @@ nano weather_analysis.py
 The command cat weather_analysis.py outputs the complete content of the file weather_analysis.py to the terminal. 
 
 cat weather_analysis.py
- 
- 
- 
-
- 
 
 3.	Perform SQL-based analysis on temperature, humidity, and weather conditions.
 Hottest and Coldest Recorded Temperatures:
